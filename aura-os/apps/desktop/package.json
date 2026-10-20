@@ -1,0 +1,14 @@
+{
+  "name": "aura-os-desktop",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^31.0.0"
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}

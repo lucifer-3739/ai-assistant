@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+google-genai
+gTTS
+openai
+requests
+pydantic
+Pillow
+opencv-python

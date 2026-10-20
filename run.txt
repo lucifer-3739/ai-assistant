@@ -1,0 +1,52 @@
+========================================================================
+                         NOVA OS RUN INSTRUCTIONS
+========================================================================
+
+NOVA OS is a Stark Industries AI-native computer assistant with dual input:
+- Voice Control (Continuous Wake Word "NOVA" + Arc Reactor Click-to-Speak)
+- Multi-Task Natural Language Command Prompt (Fast-Path Decomposition)
+- Full PC & Smart Device Hardware Controls (Apps, Windows, Media, Display, Bluetooth, WOL)
+
+------------------------------------------------------------------------
+STEP 1: CONFIGURATION (API KEYS)
+------------------------------------------------------------------------
+Make sure your Gemini API Key is configured in the environment file:
+File location: D:\Ai Voice assistant\aura-os\apps\agent\.env
+
+Ensure the following variables are set:
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-3.5-flash
+AURA_PORT=8000
+
+------------------------------------------------------------------------
+STEP 2: LAUNCH THE SYSTEM (SINGLE TERMINAL)
+------------------------------------------------------------------------
+Simply double-click the launcher script:
+  D:\Ai Voice assistant\start-nova.bat  (or start-aura.bat)
+
+This runs inside ONLY ONE terminal window, orchestrating:
+  1. Python FastAPI Backend Server (Port 8000)
+  2. Next.js Frontend Server (Port 3000)
+  3. Standalone Desktop Cockpit Window
+
+*Note: When you close the NOVA OS Desktop window, ALL background processes (backend, frontend, audio streams) are automatically terminated cleanly!*
+
+------------------------------------------------------------------------
+STEP 3: VOICE CONTROLS & MULTI-TASK DIRECTIVES
+------------------------------------------------------------------------
+Speak naturally into your microphone (e.g. "Nova, open notepad and check battery"):
+
+A. MULTI-TASK & COMPOUND COMMANDS:
+- "Nova, open Notepad and check battery status"
+- "Nova, open Chrome, set volume up, and take a screenshot"
+- "Nova, snap window left, open Code, and play synthwave on YouTube"
+- "Nova, dim screen and pause music"
+- "Nova, create folder Projects and list directory"
+
+B. PC HARDWARE & DEVICE CONTROLS:
+- App Controls: "Nova, open Notepad" / "Nova, open Chrome" / "Nova, close Notepad"
+- Media Controls: "Nova, pause music" / "Nova, next song" / "Nova, play synthwave on YouTube"
+- Display Controls: "Nova, turn off screen" / "Nova, set brightness to 70%" / "Nova, dim screen"
+- Window Controls: "Nova, maximize window" / "Nova, snap window left" / "Nova, close window"
+- Bluetooth & Network: "Nova, list bluetooth devices" / "Nova, check network" / "Nova, check battery"
+- AI Vision Analysis: "Nova, what is on my screen right now?" / "Nova, take a screenshot"

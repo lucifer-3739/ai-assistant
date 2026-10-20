@@ -1,0 +1,59 @@
+========================================================================
+                      AURA OS RUN INSTRUCTIONS
+========================================================================
+
+AURA OS is an AI-native computer assistant with dual input:
+- Voice Control (Continuous Wake Word "AURA" + Click-to-Speak Microphone)
+- Text Command Prompt (Formulates plans and executes tools)
+
+------------------------------------------------------------------------
+STEP 1: CONFIGURATION (API KEYS)
+------------------------------------------------------------------------
+Make sure your Gemini API Key is configured in the environment file:
+File location: D:\Ai Voice assistant\aura-os\apps\agent\.env
+
+Ensure the following variables are set:
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-3.5-flash
+AURA_PORT=8000
+
+------------------------------------------------------------------------
+STEP 2: LAUNCH THE SYSTEM
+------------------------------------------------------------------------
+Option A: One-Click Startup (Recommended)
+Simply double-click the launcher script:
+  D:\Ai Voice assistant\aura-os\start-aura.bat
+
+This automatically launches:
+  1. FastAPI Python Backend Server (Port 8000)
+  2. Next.js Frontend Server (Port 3000)
+  3. Standalone Desktop Cockpit Window
+
+Option B: Manual Startup in Separate Terminals
+1. Terminal 1 (Python FastAPI Backend + Voice Engine):
+   cd "D:\Ai Voice assistant\aura-os\apps\agent"
+   ..\..\.venv\Scripts\python.exe main.py
+
+2. Terminal 2 (Next.js React Frontend):
+   cd "D:\Ai Voice assistant\aura-os\apps\frontend"
+   npm run dev
+
+3. Terminal 3 (Electron Shell):
+   cd "D:\Ai Voice assistant\aura-os\apps\desktop"
+   npm start
+   (Or open http://localhost:3000 in your browser!)
+
+------------------------------------------------------------------------
+STEP 3: HOW TO USE VOICE CONTROLS
+------------------------------------------------------------------------
+There are two ways to speak to AURA OS:
+
+Method 1: Click the Microphone Button
+- Click the glowing turquoise Microphone icon next to the command bar (or the "Click to Speak" button on the left panel).
+- Speak your command (e.g. "Open Notepad" or "Create a folder called Projects").
+- AURA OS will transcribe your speech and automatically execute the plan!
+
+Method 2: Continuous Wake Word ("AURA")
+- When the voice engine is running, simply speak "AURA" aloud into your microphone.
+- You will hear a confirmation chime ("Yes?") and the cockpit will transition to LISTENING state.
+- Speak your instruction, and AURA OS will execute it and speak back the result!
